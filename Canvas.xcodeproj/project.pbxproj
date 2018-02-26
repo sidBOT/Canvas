@@ -15,6 +15,7 @@
 		1F9DD8E22044859C00C81D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DD8E02044859C00C81D9C /* LaunchScreen.storyboard */; };
 		1F9DD8ED2044859C00C81D9C /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DD8EC2044859C00C81D9C /* CanvasTests.swift */; };
 		1F9DD8F82044859C00C81D9C /* CanvasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DD8F72044859C00C81D9C /* CanvasUITests.swift */; };
+		1F9DD9062044865C00C81D9C /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DD9052044865C00C81D9C /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1F9DD8F32044859C00C81D9C /* CanvasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9DD8F72044859C00C81D9C /* CanvasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasUITests.swift; sourceTree = "<group>"; };
 		1F9DD8F92044859C00C81D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9DD9052044865C00C81D9C /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1F9DD8E02044859C00C81D9C /* LaunchScreen.storyboard */,
 				1F9DD8E32044859C00C81D9C /* Info.plist */,
 				1F9DD8DB2044859C00C81D9C /* Canvas.xcdatamodeld */,
+				1F9DD9052044865C00C81D9C /* CanvasViewController.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9DD9062044865C00C81D9C /* CanvasViewController.swift in Sources */,
 				1F9DD8D72044859C00C81D9C /* ViewController.swift in Sources */,
 				1F9DD8DD2044859C00C81D9C /* Canvas.xcdatamodeld in Sources */,
 				1F9DD8D52044859C00C81D9C /* AppDelegate.swift in Sources */,
