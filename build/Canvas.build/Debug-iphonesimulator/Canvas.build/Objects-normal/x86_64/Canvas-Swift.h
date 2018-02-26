@@ -138,16 +138,27 @@ SWIFT_CLASS("_TtC6Canvas11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
+@class UIGestureRecognizer;
+@class UIPanGestureRecognizer;
+@class UIPinchGestureRecognizer;
+@class UIRotationGestureRecognizer;
 @class UIView;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC6Canvas20CanvasViewController")
-@interface CanvasViewController : UIViewController
+@interface CanvasViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified trayView;
+@property (nonatomic, strong) UIImageView * _Null_unspecified newlyCreatedFace;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (BOOL)gestureRecognizerWithGestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer * _Nonnull)otherGestureRecognizer;
 - (IBAction)didPanTray:(id _Nonnull)sender;
+- (void)facesWithSender:(UIPanGestureRecognizer * _Nonnull)sender;
+- (IBAction)didPanFace:(UIPanGestureRecognizer * _Nonnull)sender;
+- (void)didPinchWithSender:(UIPinchGestureRecognizer * _Nonnull)sender;
+- (void)didRotateWithSender:(UIRotationGestureRecognizer * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

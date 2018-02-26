@@ -30,6 +30,9 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate{
         trayUp = trayView.center // The initial position of the tray
         trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y + trayDownOffset)
     }
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 
     @IBAction func didPanTray(_ sender: Any) {
@@ -118,7 +121,6 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate{
     @objc func didPinch(sender: UIPinchGestureRecognizer) {
         
         if sender.state == .began {
-            print("pinching")
             
             let scale = sender.scale
             newlyCreatedFace = sender.view as! UIImageView
@@ -126,7 +128,7 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate{
             sender.scale = 1
             
         } else if sender.state == .changed {
-            print("pinching")
+            
             let scale = sender.scale
             newlyCreatedFace = sender.view as! UIImageView
             newlyCreatedFace.transform = (newlyCreatedFace.transform.scaledBy(x:scale, y: scale))
@@ -159,7 +161,7 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate{
             sender.rotation = 0
             
         } else if sender.state == .ended {
-            print("Gesture ended")
+            
         }
         
     }
